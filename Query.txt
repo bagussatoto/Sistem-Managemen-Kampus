@@ -1,0 +1,22 @@
+SELECT kp.kode_presenter,nama_presenter,jmldata,hotprospek,prospek,belumprospek,batal
+FROM konfigurasi_presenter kp
+INNER JOIN master_presenter ON kp.kode_presenter = master_presenter.kode_presenter
+LEFT JOIN  
+	(SELECT kode_presenter,COUNT(kode_siswa)  as jmldata FROM siswa WHERE tahun_akademik = '2020/2021') sw 
+ON (kp.kode_presenter = sw.kode_presenter)
+LEFT JOIN
+	(SELECT siswa.kode_presenter, 
+		SUM(IF( status = "1",1, 0)) AS hotprospek,
+		SUM(IF( status = "2",1, 0)) AS prospek,
+		SUM(IF( status = "3",1, 0)) AS belumprospek,
+    SUM(IF( status = "4",1, 0)) AS batal
+		FROM aktivitas_presenter
+		INNER JOIN siswa ON aktivitas_presenter.kode_siswa = siswa.kode_siswa
+		WHERE 
+		tgl_act IN (
+		SELECT MAX(tgl_act) FROM aktivitas_presenter
+		GROUP BY kode_siswa
+		) AND siswa.tahun_akademik = '2020/2021'
+		GROUP BY siswa.kode_presenter
+		) ap ON kp.kode_presenter = ap.kode_presenter
+		WHERE kp.ta_mkt = '2020/2021'

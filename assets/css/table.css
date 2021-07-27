@@ -1,0 +1,61 @@
+
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+
+.datatable3 {
+    border: 2px solid #333538;
+    border-collapse: collapse;
+	font-size:10px;
+	width:100%;
+	/*float:left; */
+
+
+}
+
+.datatable3 td {
+    border: 1px solid #000000;
+		padding: 6px;
+
+}
+
+.datatable3 th {
+    border: 2px solid #828282;
+
+    font-weight: bold;
+    text-align: left;
+    padding:10px;
+	text-align:center;
+	font-size:11x;}
+
+
+
+
+
+  .datatable4 {
+      border: 2px solid #D6DDE6;
+      border-collapse: collapse;
+  	font-size:10px;
+  	width:300%;
+  	/*float:left; */
+
+
+  }
+
+  .datatable4 td {
+      border: 1px solid #000000;
+  		padding: 6px;
+
+  }
+
+  .datatable4 th {
+      border: 2px solid #828282;
+
+      font-weight: bold;
+      text-align: left;
+      padding:10px;
+  	text-align:center;
+  	font-size:11x;}

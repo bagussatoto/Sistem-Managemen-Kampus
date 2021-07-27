@@ -1,0 +1,66 @@
+.garis
+{
+border:1px solid;
+border-collapse:collapse;
+font-size:12;
+}
+
+.garis2
+{
+border:1px solid;
+border-collapse:collapse;
+}
+
+.garis3, .garis3 td
+{
+border:1px groove;
+border-collapse:collapse;
+font-size:8pt;
+}
+
+.garis4
+{
+border:1px solid;
+border-collapse:collapse;
+font-size:9px
+}
+
+.garis5
+{
+border:0px;
+border-collapse:collapse;
+font-size:11px
+}
+
+.garis6
+{
+border:1px solid;
+border-collapse:collapse;
+font-size:11px;
+padding: 5px !important;
+}
+
+.garis6 td
+{
+	padding:6px;
+}
+
+.garis6 th
+{
+	padding:6px;
+}
+.garis3 tr td h3 em {
+	font-family: "Times New Roman", Times, serif;
+}
+.garis3 tr td strong em {
+	font-size: 10px;
+}
+.garis3 tr td h4 em {
+	font-size: 12px;
+}
+body table tr td h4 em {
+	font-size: 12px;
+}
+body table tr td {
+	font-size: 12px;
+}
